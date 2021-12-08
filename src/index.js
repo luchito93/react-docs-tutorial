@@ -1,7 +1,8 @@
 import ReactDOM from 'react-dom';
-import Calculator from './Calculator'
+import App from './App'
+import './index.css'
 
 ReactDOM.render(
-  <Calculator />,
+  <App />,
   document.getElementById('root')
 );

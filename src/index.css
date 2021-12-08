@@ -1,0 +1,23 @@
+.fancyborder-purple {
+    border: 3px inset rebeccapurple;
+}
+
+.fancyborder-golden {
+    border: 3px inset goldenrod;
+}
+
+.column-style {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+
+.column-1 {
+    background-color: darkgrey;
+    width: 100%;
+}
+
+.column-2 {
+    background-color: lemonchiffon;
+    width: 100%;
+}
