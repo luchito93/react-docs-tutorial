@@ -8,9 +8,10 @@ function TemperatueInput (props) {
     const {scale} = props
     const {onTempChange} = props
     return (
-        <fieldset>
+        <fieldset className="border shadow-sm rounded-md">
             <legend>Enter temperature in {scalesNames[scale]}:</legend>
-            <input value={temperature} onChange={(e) => onTempChange(e.target.value)} />
+            <input value={temperature} onChange={(e) => onTempChange(e.target.value)}  className="border rounded-md m-1
+            focus:outline-gray-600 pl-1"/>
         </fieldset>
     )
 }
