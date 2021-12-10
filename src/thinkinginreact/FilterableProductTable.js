@@ -1,4 +1,6 @@
 import { Component } from 'react'
+import UserInput from './UserInput'
+import ProducTable from './ProductTable'
 
 class FilterableProductTable extends Component {
     apiData = [
@@ -12,8 +14,11 @@ class FilterableProductTable extends Component {
 
     render() {
         return (
-            <div className='mt-9'>
-                Mi tablita bonita
+            <div className='mt-9 grid grid-cols-4'>
+                <div>
+                    <UserInput />
+                    <ProducTable apiData={this.apiData}/>
+                </div>
             </div>
         )
     }
