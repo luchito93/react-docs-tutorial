@@ -6,9 +6,18 @@ class FilterableProductTable extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            searchText : 'BALL',
+            searchText : '',
             isStock: false
         }
+    }
+
+    handleInputChangue = (event) => {
+        const target = event.target
+        const value = target.type === 'checkbox' ? target.checked : target.value
+        const name = target.name
+        this.setState({
+            [name]:value
+        })
     }
 
 
@@ -27,7 +36,8 @@ class FilterableProductTable extends Component {
             <div className='mt-9 grid grid-cols-3'>
                 <div className='shadow-md rounded-md p-3'>
                     <h1 className='text-lg font-bold text-center mb-3'>Thinking in React</h1>
-                    <UserInput searchText={this.state.searchText} isStock={this.state.isStock} />
+                    <UserInput searchText={this.state.searchText} isStock={this.state.isStock}
+                        onChangueInput={this.handleInputChangue} />
                     <ProducTable apiData={this.apiData} searchText={this.state.searchText} isStock={this.state.isStock}/>
                 </div>
             </div>
