@@ -5,16 +5,24 @@ import RowsData from "./RowsData";
 class ProducTable extends Component {
     render() {
         const { apiData } = this.props
-        const categoriesDuplicate = apiData.map(data => data.category)
+        const { searchText } = this.props
+        const { isStock } = this.props
+
+        const apiDataStocked = isStock === true ? apiData.filter(data => data.stocked === true) : apiData
+        const apidDataSearched = searchText ?
+            apiDataStocked.filter(data => data.name.toLocaleLowerCase().includes(searchText.toLocaleLowerCase())) :
+            apiDataStocked
+
+        const categoriesDuplicate = apidDataSearched.map(data => data.category)
         const categories = [...new Set(categoriesDuplicate)]
 
         const rows = []
 
-        categories.forEach(category => {
-            rows.push(<CategoriesRow name={category} />)
-            const dataCat = apiData.filter(data => data.category === category)
-            dataCat.forEach(datac => {
-                rows.push(<RowsData name={datac.name} price={datac.price} />)
+        categories.forEach((category, catId) => {
+            rows.push(<CategoriesRow name={category} key={`cat-${catId}`}/>)
+            const dataCat = apidDataSearched.filter(data => data.category === category)
+            dataCat.forEach((datac, datacId) => {
+                rows.push(<RowsData name={datac.name} price={datac.price} key={`cat-${catId}-row-data-${datacId}`} />)
             })
         })
 

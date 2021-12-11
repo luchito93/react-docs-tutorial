@@ -2,11 +2,14 @@ import { Component } from "react";
 
 class UserInput extends Component {
     render() {
-         const Input = () => <input  name="search" placeholder="Serach..." type="text"
+        const { searchText } = this.props
+        const { isStock } = this.props
+
+         const Input = () => <input  name="search" placeholder="Serach..." type="text" value={searchText}
             className="border rounded-md w-full shadow-inner p-1 outline-none focus:shadow-blue-100
             focus:shadow-md"/>
         
-        const Checkbox = () => <input type="checkbox"  className="mr-3 ml-1"/>
+        const Checkbox = () => <input type="checkbox"  className="mr-3 ml-1" checked={isStock}/>
         
         return (
             <div>

@@ -3,6 +3,15 @@ import UserInput from './UserInput'
 import ProducTable from './ProductTable'
 
 class FilterableProductTable extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            searchText : 'BALL',
+            isStock: false
+        }
+    }
+
+
     apiData = [
         {category: "Sporting Goods", price: "$49.99", stocked: true, name: "Football"},
         {category: "Sporting Goods", price: "$9.99", stocked: true, name: "Baseball"},
@@ -18,8 +27,8 @@ class FilterableProductTable extends Component {
             <div className='mt-9 grid grid-cols-3'>
                 <div className='shadow-md rounded-md p-3'>
                     <h1 className='text-lg font-bold text-center mb-3'>Thinking in React</h1>
-                    <UserInput />
-                    <ProducTable apiData={this.apiData}/>
+                    <UserInput searchText={this.state.searchText} isStock={this.state.isStock} />
+                    <ProducTable apiData={this.apiData} searchText={this.state.searchText} isStock={this.state.isStock}/>
                 </div>
             </div>
         )
