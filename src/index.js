@@ -1,17 +1,21 @@
 import ReactDOM from 'react-dom';
+import { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import App from './App'
-import VolidCalculator from './advancedguides/codesplitin/VolidCalculator';
-import AdvancedGuides from './advancedguides/codesplitin/AdvancedGuides';
 import './index.css'
+
+const App = lazy(() => import("./App"))
+const VolidCalculator = lazy(() => import('./advancedguides/codesplitin/VolidCalculator'))
+const AdvancedGuides = lazy(() => import('./advancedguides/codesplitin/AdvancedGuides'))
 
 ReactDOM.render(
   <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App/>} />
-      <Route path="/voild-calculator" element={<VolidCalculator />} />
-      <Route path="/advanced-guides" element={<AdvancedGuides />} />
-    </Routes>
+    <Suspense fallback={<div>Cargando criaguras ..............</div>}>
+      <Routes>
+        <Route path="/" element={<App/>} />
+        <Route path="/voild-calculator" element={<VolidCalculator />} />
+        <Route path="/advanced-guides" element={<AdvancedGuides />} />
+      </Routes>
+    </Suspense>
   </BrowserRouter>,
   document.getElementById('root')
 );
