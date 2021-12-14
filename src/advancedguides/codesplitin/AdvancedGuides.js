@@ -2,6 +2,7 @@ import Navbar from "./Navbar"
 import FragmentsTable from "../fragments/Table"
 import RefExample from "../refsandthedom/MyComponent"
 import MouseAndPointerEvent from "../mouseandpointerevents/SelectExample"
+import ContextUsage from "../context/ContextUsage"
 
 export default function AdvancedGuides(props) {
     return (
@@ -12,6 +13,7 @@ export default function AdvancedGuides(props) {
                 <FragmentsTable />
                 <RefExample />
                 <MouseAndPointerEvent />
+                <ContextUsage />
             </div>
         </>
     )
