@@ -11,9 +11,14 @@ const themes = {
 
 
 const ThemeContext = createContext(themes.dark)
+const ThemeContextChild = createContext({
+    theme: themes.dark,
+    changueTheme: () => {}
+})
 
 export {
     themes,
-    ThemeContext
+    ThemeContext,
+    ThemeContextChild
 }
 
