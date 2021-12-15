@@ -3,6 +3,7 @@ import FragmentsTable from "../fragments/Table"
 import RefExample from "../refsandthedom/MyComponent"
 import MouseAndPointerEvent from "../mouseandpointerevents/SelectExample"
 import ContextUsage from "../context/ContextUsage"
+import DinamicContex from "../context/dinamicContext/DinamicContex"
 
 export default function AdvancedGuides(props) {
     return (
@@ -14,6 +15,7 @@ export default function AdvancedGuides(props) {
                 <RefExample />
                 <MouseAndPointerEvent />
                 <ContextUsage />
+                <DinamicContex />
             </div>
         </>
     )
