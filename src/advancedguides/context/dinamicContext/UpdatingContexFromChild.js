@@ -30,7 +30,7 @@ class ParentContexApp extends Component {
         this.changueTheme = () => {
             this.setState((currentState) => (
                 {
-                    theme: currentState.theme.tailwind === themes.dark.tailwind ?
+                    theme: currentState.theme.dark.tailwind === themes.dark.tailwind ?
                             themes.light :
                             themes.dark
                 }

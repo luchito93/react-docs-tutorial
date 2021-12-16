@@ -5,6 +5,7 @@ import MouseAndPointerEvent from "../mouseandpointerevents/SelectExample"
 import ContextUsage from "../context/ContextUsage"
 import DinamicContex from "../context/dinamicContext/DinamicContex"
 import ParentContexApp from "../context/dinamicContext/UpdatingContexFromChild"
+import ErrorBoundaries from "../errorBoundaries/ErrorBoundaries"
 
 export default function AdvancedGuides(props) {
     return (
@@ -18,7 +19,9 @@ export default function AdvancedGuides(props) {
                 <h3 className="font-bold mt-7">Contexto</h3>
                 <ContextUsage />
                 <DinamicContex />
-                <ParentContexApp />
+                <ErrorBoundaries>
+                    <ParentContexApp />
+                </ErrorBoundaries>
             </div>
         </>
     )
