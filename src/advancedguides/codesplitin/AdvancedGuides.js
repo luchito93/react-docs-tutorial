@@ -6,6 +6,7 @@ import ContextUsage from "../context/ContextUsage"
 import DinamicContex from "../context/dinamicContext/DinamicContex"
 import ParentContexApp from "../context/dinamicContext/UpdatingContexFromChild"
 import ErrorBoundaries from "../errorBoundaries/ErrorBoundaries"
+import ForwardingRef from "../forwardingRef/ForwardingRef"
 
 export default function AdvancedGuides(props) {
     return (
@@ -22,6 +23,7 @@ export default function AdvancedGuides(props) {
                 <ErrorBoundaries>
                     <ParentContexApp />
                 </ErrorBoundaries>
+                <ForwardingRef />
             </div>
         </>
     )
