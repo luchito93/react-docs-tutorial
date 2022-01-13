@@ -7,6 +7,7 @@ import DinamicContex from "../context/dinamicContext/DinamicContex"
 import ParentContexApp from "../context/dinamicContext/UpdatingContexFromChild"
 import ErrorBoundaries from "../errorBoundaries/ErrorBoundaries"
 import ForwardingRef from "../forwardingRef/ForwardingRef"
+import ProductListSearch from "../hoc/ProductListSearch"
 
 export default function AdvancedGuides(props) {
     return (
@@ -24,6 +25,7 @@ export default function AdvancedGuides(props) {
                     <ParentContexApp />
                 </ErrorBoundaries>
                 <ForwardingRef />
+                <ProductListSearch />
             </div>
         </>
     )
