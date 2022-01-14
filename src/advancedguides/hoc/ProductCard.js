@@ -1,7 +1,7 @@
 const ProductCard = props => {
     const {title, style, price, description, isFreeShipping} = props.product
-    return (
-        <div className="shadow-md rounded-md border-2 border-indigo-500 my-3 p-2">
+    const productCard = (
+        <>
             <p>
                 <b>Title:</b> {title}
             </p>
@@ -17,6 +17,21 @@ const ProductCard = props => {
             <p>
                 <b>Free shipping:</b> {isFreeShipping}
             </p>
+        </>
+    )
+    const userCard = (
+        <>
+            <p>
+                <b>Title</b> {title}
+            </p>
+            <p>
+                <b>Description</b> {description}
+            </p>
+        </>
+    )
+    return (
+        <div className="shadow-md rounded-md border-2 border-indigo-500 my-3 p-2">
+            { isFreeShipping === undefined ? userCard : productCard}
         </div>
     )
 }

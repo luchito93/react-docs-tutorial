@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Francisco",
+        "Description": "Administrador",
+        "sku": 1
+    },
+    {
+        "title": "Pedro",
+        "Description": "Organizador",
+        "sku": 2
+    },
+    {
+        "title": "Maria",
+        "Description": "Contadora",
+        "sku": 3
+    }
+]

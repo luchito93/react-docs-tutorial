@@ -8,6 +8,8 @@ import ParentContexApp from "../context/dinamicContext/UpdatingContexFromChild"
 import ErrorBoundaries from "../errorBoundaries/ErrorBoundaries"
 import ForwardingRef from "../forwardingRef/ForwardingRef"
 import ProductListSearch from "../hoc/ProductListSearch"
+import { ProducListWithSearchHoc } from "../hoc/HocProducList"
+import UserSearch from "../hoc/UserSearch"
 
 export default function AdvancedGuides(props) {
     return (
@@ -25,7 +27,11 @@ export default function AdvancedGuides(props) {
                     <ParentContexApp />
                 </ErrorBoundaries>
                 <ForwardingRef />
-                <ProductListSearch />
+                <div className="grid gap-4 grid-cols-1 md:grid-cols-3">
+                    <ProductListSearch />
+                    <ProducListWithSearchHoc />
+                    <UserSearch />
+                </div>
             </div>
         </>
     )
