@@ -10,6 +10,7 @@ import ForwardingRef from "../forwardingRef/ForwardingRef"
 import ProductListSearch from "../hoc/ProductListSearch"
 import { ProducListWithSearchHoc } from "../hoc/HocProducList"
 import UserSearch from "../hoc/UserSearch"
+import { BlueDatePicker, SpreadButton, CallBackChildren } from "../jsxInDepth/jsxInDepth"
 
 export default function AdvancedGuides(props) {
     return (
@@ -31,6 +32,12 @@ export default function AdvancedGuides(props) {
                     <ProductListSearch />
                     <ProducListWithSearchHoc />
                     <UserSearch />
+                </div>
+                <div className="my-4">
+                    <h3 className="uppercase text-indigo-900 mb-3">jsx in depth</h3>
+                    <BlueDatePicker />
+                    <SpreadButton />
+                    <CallBackChildren />
                 </div>
             </div>
         </>
