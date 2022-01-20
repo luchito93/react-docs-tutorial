@@ -11,6 +11,7 @@ import ProductListSearch from "../hoc/ProductListSearch"
 import { ProducListWithSearchHoc } from "../hoc/HocProducList"
 import UserSearch from "../hoc/UserSearch"
 import { BlueDatePicker, SpreadButton, CallBackChildren } from "../jsxInDepth/jsxInDepth"
+import UsePortal from "../portals/UsePortal"
 
 export default function AdvancedGuides(props) {
     return (
@@ -39,6 +40,7 @@ export default function AdvancedGuides(props) {
                     <SpreadButton />
                     <CallBackChildren />
                 </div>
+                <UsePortal />
             </div>
         </>
     )
