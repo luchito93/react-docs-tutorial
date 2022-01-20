@@ -2,8 +2,14 @@ import { useState, createRef, useEffect } from "react"
 import Portal from "./Portal"
 
 /**
+ * Example portal explication
+ * https://blog.logrocket.com/learn-react-portals-by-example/
+ * 
  * Example sanbox use portal
  * https://codesandbox.io/s/github/supromikali/react-portals-example?file=/src/index.js:693-707
+ * 
+ * example debounce founctin loudash vanilla js
+ * https://www.joshwcomeau.com/snippets/javascript/debounce/
  */
 
 const Image = () => (
