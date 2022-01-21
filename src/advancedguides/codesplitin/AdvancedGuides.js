@@ -12,6 +12,7 @@ import { ProducListWithSearchHoc } from "../hoc/HocProducList"
 import UserSearch from "../hoc/UserSearch"
 import { BlueDatePicker, SpreadButton, CallBackChildren } from "../jsxInDepth/jsxInDepth"
 import UsePortal from "../portals/UsePortal"
+import { Profiler } from "react"
 
 export default function AdvancedGuides(props) {
     return (
@@ -40,8 +41,22 @@ export default function AdvancedGuides(props) {
                     <SpreadButton />
                     <CallBackChildren />
                 </div>
-                <UsePortal />
+                <Profiler id="UsePortal" onRender={profilerCallback}>
+                    <UsePortal />
+                </Profiler>
             </div>
         </>
     )
 }
+
+function profilerCallback (
+    id, // the "id" prop of the Profiler tree that has just committed
+    phase, // either "mount" (if the tree just mounted) or "update" (if it re-rendered)
+    actualDuration, // time spent rendering the committed update
+    baseDuration, // estimated time to render the entire subtree without memoization
+    startTime, // when React began rendering this update
+    commitTime, // when React committed this update
+    interactions
+  ) {
+    console.log('Profiler update', ...arguments)
+  }
