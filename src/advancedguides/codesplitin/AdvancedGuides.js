@@ -13,6 +13,7 @@ import UserSearch from "../hoc/UserSearch"
 import { BlueDatePicker, SpreadButton, CallBackChildren } from "../jsxInDepth/jsxInDepth"
 import UsePortal from "../portals/UsePortal"
 import { Profiler } from "react"
+import  MouseTrackerTwo  from "../renderprops/RenderProps"
 
 export default function AdvancedGuides(props) {
     return (
@@ -44,6 +45,7 @@ export default function AdvancedGuides(props) {
                 <Profiler id="UsePortal" onRender={profilerCallback}>
                     <UsePortal />
                 </Profiler>
+                <MouseTrackerTwo />
             </div>
         </>
     )

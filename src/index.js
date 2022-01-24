@@ -24,3 +24,8 @@ ReactDOM.render(
   </BrowserRouter>,
   document.getElementById('root')
 );
+
+/**
+ * subir a netlify
+ * instalr la extension lighthouse para ver el rendimiento
+ */
