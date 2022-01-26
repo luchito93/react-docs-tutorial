@@ -7,6 +7,7 @@ function Navbar (props) {
                 <Link to="/" className='bg-teal-50 rounded-md px-4 cursor-pointer'>Inicio</Link>
                 <Link to="/voild-calculator" className='bg-teal-50 rounded-md px-4 cursor-pointer'>Voild Calculator</Link>
                 <Link to="/advanced-guides" className='bg-teal-50 rounded-md px-4 cursor-pointer'>Advanced Guides</Link>
+                <Link to="/hooks" className='bg-teal-50 rounded-md px-4 cursor-pointer'>Hooks</Link>
             </nav>
         </div>
     )
