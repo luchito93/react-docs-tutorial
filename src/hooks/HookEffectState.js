@@ -4,7 +4,7 @@ const HookEffectState = () => {
    const [counter, setCounter] = useState(0)
    useEffect(() => {
        console.log('counter rendered after update render', counter)
-       return function cleanUp() {
+       return () => {
            console.log('limpiza hook counter before update render')
        }
    })

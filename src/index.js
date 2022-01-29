@@ -32,4 +32,9 @@ ReactDOM.render(
 /**
  * subir a netlify
  * instalr la extension lighthouse para ver el rendimiento
+ * 
+ * custom hoosk
+ * https://blog.shahednasser.com/react-custom-hooks-tutorial-creating-useonline/
+ * https://blog.bitsrc.io/writing-your-own-custom-hooks-4fbcf77e112e
+ * https://blog.logrocket.com/react-render-props-vs-custom-hooks/
  */
