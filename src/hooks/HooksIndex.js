@@ -2,6 +2,7 @@ import Navbar from "../advancedguides/codesplitin/Navbar"
 import HookEffectState from "./HookEffectState"
 import { CounterLocalStorage, CounterCustom } from "./CustomHook"
 import ContexHook from "./ContexHook"
+import CounterReducer from "./HookReducer"
 
 export default function HooksIndex (props) {
     return (
@@ -14,6 +15,7 @@ export default function HooksIndex (props) {
                 <CounterCustom />
                 </div>
                 <ContexHook />
+                <CounterReducer />
             </div>       
         </>
     )
