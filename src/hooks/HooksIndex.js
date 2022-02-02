@@ -3,6 +3,7 @@ import HookEffectState from "./HookEffectState"
 import { CounterLocalStorage, CounterCustom } from "./CustomHook"
 import ContexHook from "./ContexHook"
 import CounterReducer from "./HookReducer"
+import PreviosValueHook from "./UsePreviousValueHook"
 
 export default function HooksIndex (props) {
     return (
@@ -16,6 +17,7 @@ export default function HooksIndex (props) {
                 </div>
                 <ContexHook />
                 <CounterReducer />
+                <PreviosValueHook />
             </div>       
         </>
     )
